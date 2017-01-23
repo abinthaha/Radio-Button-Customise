@@ -1,0 +1,28 @@
+body {
+    background-color: #ddd;
+    padding: 20px;
+}
+
+.radio-group input {
+    visibility: hidden;
+}
+
+.radio-group .radio-each label {
+    position: relative;
+    cursor: pointer;
+}
+
+.radio-group .radio-each label::before {
+    position: absolute;
+    left: -30px;
+    display: inline-block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-image: url('images/empty.png');
+}
+
+.radio-group .radio-each input:checked + label::before {
+    background-image: url('images/filled.png');
+}
